@@ -1,0 +1,3030 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Velvet Stay | Luxury B&amp;Bs</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:#f8f9fb;
+    color:#172033;
+}
+
+:root{
+    --royal:#101d3a;
+    --royal2:#182a52;
+    --gold:#c9a227;
+    --gold-light:#e7cf78;
+    --white:#ffffff;
+    --border:#e4e7ec;
+    --muted:#6d7585;
+    --shadow:0 12px 35px rgba(16,29,58,.10);
+}
+
+.container{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+select{
+    font-family:inherit;
+}
+
+
+/* ================================
+HEADER
+================================ */
+
+header{
+    height:78px;
+    background:white;
+    border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:20px;
+    font-weight:800;
+    color:var(--royal);
+}
+
+.logo-icon{
+    width:40px;
+    height:40px;
+    background:var(--royal);
+    color:var(--gold-light);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:11px;
+    font-family:"Playfair Display",serif;
+    font-size:21px;
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    align-items:center;
+}
+
+.nav-links a{
+    font-size:14px;
+    font-weight:600;
+    color:#424b5b;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.signin{
+    font-size:14px;
+    font-weight:700;
+    color:var(--royal);
+}
+
+.list-btn{
+    border:0;
+    background:var(--royal);
+    color:white;
+    padding:11px 17px;
+    border-radius:9px;
+    font-size:12px;
+    font-weight:700;
+}
+
+
+/* ================================
+HERO
+================================ */
+
+.stays-hero{
+    min-height:390px;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(8,17,37,.90),
+        rgba(8,17,37,.58),
+        rgba(8,17,37,.25)
+    ),
+
+    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    color:white;
+    max-width:720px;
+}
+
+.hero-content h1{
+    font-family:"Playfair Display",serif;
+    font-size:52px;
+    line-height:1.1;
+    margin-bottom:15px;
+}
+
+.hero-content h1 span{
+    color:var(--gold-light);
+}
+
+.hero-content p{
+    color:#e0e5ee;
+    font-size:15px;
+    line-height:1.7;
+    max-width:600px;
+}
+
+
+/* ================================
+SEARCH
+================================ */
+
+.search-area{
+    margin-top:-45px;
+    position:relative;
+    z-index:5;
+}
+
+.search-box{
+    background:white;
+    border-radius:16px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+    padding:13px;
+
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr auto;
+    gap:8px;
+}
+
+.search-field{
+    padding:10px 15px;
+    border-right:1px solid var(--border);
+}
+
+.search-field label{
+    display:block;
+    font-size:10px;
+    text-transform:uppercase;
+    font-weight:800;
+    color:#7b8290;
+    margin-bottom:6px;
+}
+
+.search-field input,
+.search-field select{
+    width:100%;
+    border:0;
+    outline:none;
+    background:white;
+    font-size:13px;
+    color:var(--royal);
+}
+
+.search-button{
+    background:var(--gold);
+    color:white;
+    border:0;
+    border-radius:9px;
+    padding:0 24px;
+    font-weight:800;
+}
+
+
+/* ================================
+CONTENT
+================================ */
+
+.content{
+    padding:70px 0;
+}
+
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:28px;
+}
+
+.section-header h2{
+    font-family:"Playfair Display",serif;
+    font-size:35px;
+    color:var(--royal);
+}
+
+.section-header p{
+    color:var(--muted);
+    font-size:13px;
+    margin-top:7px;
+}
+
+
+/* ================================
+FILTERS
+================================ */
+
+.filters{
+    display:flex;
+    gap:9px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.filter{
+    border:1px solid var(--border);
+    background:white;
+    color:#515968;
+    padding:10px 16px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.filter.active,
+.filter:hover{
+    background:var(--royal);
+    color:white;
+    border-color:var(--royal);
+}
+
+
+/* ================================
+PROPERTY GRID
+================================ */
+
+.property-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.property-card{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 5px 22px rgba(15,29,55,.07);
+    transition:.25s;
+}
+
+.property-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+.property-image{
+    height:225px;
+    position:relative;
+    overflow:hidden;
+}
+
+.property-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.property-card:hover img{
+    transform:scale(1.06);
+}
+
+.favorite{
+    position:absolute;
+    top:12px;
+    right:12px;
+
+    width:37px;
+    height:37px;
+
+    border:0;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.95);
+
+    font-size:18px;
+}
+
+.badge{
+    position:absolute;
+    top:12px;
+    left:12px;
+
+    background:white;
+    color:var(--royal);
+
+    padding:6px 9px;
+    border-radius:6px;
+
+    font-size:9px;
+    font-weight:800;
+}
+
+.property-info{
+    padding:17px;
+}
+
+.location{
+    color:var(--muted);
+    font-size:11px;
+    margin-bottom:7px;
+}
+
+.property-name{
+    font-size:16px;
+    font-weight:800;
+    color:var(--royal);
+    margin-bottom:9px;
+}
+
+.rating{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    font-size:11px;
+    margin-bottom:13px;
+}
+
+.star{
+    color:var(--gold);
+}
+/* =========================================================
+   CAR HIRE CARDS INSIDE STAYS GRID
+========================================================= */
+
+.car-hire-card{
+    background:white;
+    border-radius:17px;
+    overflow:hidden;
+    box-shadow:0 5px 22px rgba(15,29,55,.07);
+    transition:.25s;
+}
+
+.car-hire-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+.car-hire-image{
+    height:220px;
+    position:relative;
+    overflow:hidden;
+    background:#eef0f3;
+}
+
+.car-hire-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.car-hire-card:hover .car-hire-image img{
+    transform:scale(1.05);
+}
+
+.car-hire-tag{
+    position:absolute;
+    left:12px;
+    top:12px;
+    background:var(--royal);
+    color:white;
+    padding:6px 10px;
+    border-radius:7px;
+    font-size:10px;
+    font-weight:800;
+}
+
+.car-hire-favorite{
+    position:absolute;
+    right:12px;
+    top:12px;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    border:0;
+    background:rgba(255,255,255,.93);
+    font-size:17px;
+}
+
+.car-hire-info{
+    padding:17px;
+}
+
+.car-hire-location{
+    font-size:12px;
+    color:var(--muted);
+    margin-bottom:6px;
+}
+
+.car-hire-name{
+    font-size:15px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.car-hire-rating{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    font-size:12px;
+    margin-bottom:14px;
+}
+
+.car-hire-rating .star{
+    color:var(--gold);
+}
+
+.car-hire-meta{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    font-size:11px;
+    color:var(--muted);
+    margin-bottom:14px;
+}
+
+.car-hire-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.car-hire-price{
+    font-weight:800;
+    color:var(--royal);
+}
+
+.car-hire-price small{
+    font-size:11px;
+    color:var(--muted);
+    font-weight:400;
+}
+
+.car-hire-btn{
+    border:0;
+    background:var(--royal);
+    color:white;
+    padding:9px 12px;
+    border-radius:8px;
+    font-size:11px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.car-hire-btn:hover{
+    background:var(--royal2);
+}
+.amenities{
+    display:flex;
+    gap:9px;
+    flex-wrap:wrap;
+    color:#707887;
+    font-size:10px;
+    padding-bottom:14px;
+    border-bottom:1px solid var(--border);
+}
+
+.property-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-top:14px;
+}
+
+.price{
+    color:var(--royal);
+    font-size:16px;
+    font-weight:800;
+}
+
+.price span{
+    color:var(--muted);
+    font-size:10px;
+    font-weight:400;
+}
+
+.book{
+    background:var(--royal);
+    color:white;
+    border:0;
+    padding:9px 13px;
+    border-radius:8px;
+    font-size:11px;
+    font-weight:700;
+}
+
+.book:hover{
+    background:var(--gold);
+}
+
+
+/* ================================
+PROMO
+================================ */
+
+.promo{
+    margin-top:65px;
+    background:var(--royal);
+    border-radius:20px;
+    padding:40px;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.promo h2{
+    font-family:"Playfair Display",serif;
+    font-size:29px;
+    margin-bottom:9px;
+}
+
+.promo p{
+    color:#bdc5d4;
+    font-size:13px;
+    line-height:1.7;
+}
+
+.promo button{
+    flex-shrink:0;
+    border:0;
+    background:var(--gold);
+    color:white;
+    padding:13px 20px;
+    border-radius:9px;
+    font-weight:700;
+}
+
+
+/* ================================
+FOOTER
+================================ */
+
+footer{
+    background:#0a1429;
+    color:#aab2c1;
+    padding:60px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1.3fr;
+    gap:40px;
+    padding-bottom:40px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.footer-logo{
+    color:white;
+    font-size:20px;
+    font-weight:800;
+    margin-bottom:13px;
+}
+
+.footer-logo span{
+    color:var(--gold-light);
+}
+
+.footer-about{
+    font-size:12px;
+    line-height:1.8;
+    max-width:320px;
+}
+
+footer h4{
+    color:white;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+footer a{
+    display:block;
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+.copyright{
+    padding-top:22px;
+    font-size:11px;
+    color:#737d90;
+
+    display:flex;
+    justify-content:space-between;
+}
+
+
+/* ================================
+MODAL
+================================ */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(3,9,20,.72);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    z-index:3000;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-box{
+    background:white;
+    width:min(580px,100%);
+    border-radius:17px;
+    overflow:hidden;
+    max-height:90vh;
+    overflow-y:auto;
+}
+
+.modal-header{
+    padding:20px;
+    border-bottom:1px solid var(--border);
+    display:flex;
+    justify-content:space-between;
+}
+
+.modal-header h3{
+    color:var(--royal);
+}
+
+.close{
+    border:0;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#f0f2f5;
+    font-size:18px;
+}
+
+.modal-body{
+    padding:22px;
+}
+
+.booking-property{
+    background:#f5f6f8;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.booking-property strong{
+    display:block;
+    color:var(--royal);
+    margin-bottom:5px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.form-group{
+    margin-bottom:12px;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+.form-group label{
+    display:block;
+    font-size:10px;
+    font-weight:800;
+    color:#707887;
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group select{
+    width:100%;
+    padding:12px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    outline:none;
+}
+
+.total{
+    background:var(--royal);
+    color:white;
+    padding:16px;
+    border-radius:10px;
+
+    display:flex;
+    justify-content:space-between;
+
+    margin:10px 0 15px;
+}
+
+.whatsapp{
+    width:100%;
+    background:#25D366;
+    border:0;
+    color:white;
+    padding:14px;
+    border-radius:9px;
+    font-weight:800;
+}
+
+
+/* ================================
+FLOATING WHATSAPP
+================================ */
+
+/* =========================================
+   MODERN FLOATING WHATSAPP BUTTON
+========================================= */
+
+.whatsapp-float{
+    position:fixed;
+    right:24px;
+    bottom:24px;
+
+    width:58px;
+    height:58px;
+
+    background:linear-gradient(135deg,#25D366,#128C7E);
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    font-size:26px;
+    text-decoration:none;
+
+    box-shadow:
+        0 8px 25px rgba(18,140,126,.30),
+        0 3px 10px rgba(0,0,0,.12);
+
+    z-index:2000;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+    animation:whatsappPulse 2.5s infinite;
+}
+
+/* Hover effect */
+
+.whatsapp-float:hover{
+    transform:translateY(-5px) scale(1.06);
+
+    box-shadow:
+        0 14px 35px rgba(18,140,126,.40),
+        0 5px 15px rgba(0,0,0,.15);
+}
+
+/* Click effect */
+
+.whatsapp-float:active{
+    transform:scale(.94);
+}
+
+
+/* =========================================
+   PULSE EFFECT
+========================================= */
+
+@keyframes whatsappPulse{
+
+    0%{
+        box-shadow:
+            0 8px 25px rgba(18,140,126,.30),
+            0 0 0 0 rgba(37,211,102,.35);
+    }
+
+    70%{
+        box-shadow:
+            0 8px 25px rgba(18,140,126,.30),
+            0 0 0 12px rgba(37,211,102,0);
+    }
+
+    100%{
+        box-shadow:
+            0 8px 25px rgba(18,140,126,.30),
+            0 0 0 0 rgba(37,211,102,0);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:550px){
+
+    .whatsapp-float{
+        right:17px;
+        bottom:17px;
+
+        width:54px;
+        height:54px;
+
+        font-size:24px;
+    }
+
+}
+
+/* ================================
+RESPONSIVE
+================================ */
+
+@media(max-width:1050px){
+
+    .property-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .search-box{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .search-field{
+        border-bottom:1px solid var(--border);
+    }
+
+    .search-button{
+        height:48px;
+    }
+
+}
+
+@media(max-width:800px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .nav-actions{
+        display:none;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .property-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:550px){
+
+    .property-grid{
+        grid-template-columns:1fr;
+    }
+
+    .search-box{
+        display:block;
+    }
+
+    .search-field{
+        border-right:0;
+    }
+
+    .search-button{
+        width:100%;
+        margin-top:8px;
+    }
+
+    .hero-content h1{
+        font-size:34px;
+    }
+
+    .section-header{
+        display:block;
+    }
+
+    .promo{
+        display:block;
+        padding:28px;
+    }
+
+    .promo button{
+        margin-top:20px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .copyright{
+        display:block;
+        line-height:2;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full{
+        grid-column:auto;
+    }
+
+}
+
+
+
+/* =========================================
+   PROPERTY IMAGE CAROUSELS
+========================================= */
+
+.property-image{
+    cursor:pointer;
+    user-select:none;
+}
+
+.property-image img{
+    display:block;
+}
+
+.carousel-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:36px;
+    height:36px;
+    border:0;
+    border-radius:50%;
+    background:rgba(255,255,255,.94);
+    color:#101d3a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    line-height:1;
+    cursor:pointer;
+    z-index:5;
+    box-shadow:0 4px 14px rgba(0,0,0,.18);
+    transition:.2s;
+}
+
+.carousel-arrow:hover{
+    background:#c9a227;
+    color:#fff;
+}
+
+.carousel-prev{
+    left:12px;
+}
+
+.carousel-next{
+    right:12px;
+}
+
+.carousel-counter{
+    position:absolute;
+    left:50%;
+    bottom:12px;
+    transform:translateX(-50%);
+    background:rgba(0,0,0,.58);
+    color:#fff;
+    padding:5px 9px;
+    border-radius:20px;
+    font-size:9px;
+    font-weight:700;
+    z-index:5;
+}
+
+.carousel-dots{
+    position:absolute;
+    left:50%;
+    bottom:8px;
+    transform:translateX(-50%);
+    display:flex;
+    gap:4px;
+    z-index:5;
+}
+
+.carousel-dots span{
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:rgba(255,255,255,.58);
+    transition:.2s;
+}
+
+.carousel-dots span.active{
+    width:14px;
+    border-radius:8px;
+    background:#fff;
+}
+
+/* Full screen gallery */
+
+.gallery-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(3,8,20,.94);
+    z-index:5000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+}
+
+.gallery-modal.show{
+    display:flex;
+}
+
+.gallery-close{
+    position:absolute;
+    top:18px;
+    right:22px;
+    width:44px;
+    height:44px;
+    border:0;
+    border-radius:50%;
+    background:rgba(255,255,255,.12);
+    color:#fff;
+    font-size:27px;
+    cursor:pointer;
+    z-index:20;
+}
+
+.gallery-title{
+    position:absolute;
+    top:25px;
+    left:28px;
+    color:#fff;
+    font-size:14px;
+    font-weight:700;
+    z-index:20;
+}
+
+.gallery-stage{
+    width:min(1100px,92vw);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+.gallery-main{
+    max-width:100%;
+    max-height:72vh;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    border-radius:10px;
+    box-shadow:0 20px 70px rgba(0,0,0,.5);
+}
+
+.gallery-nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:48px;
+    height:48px;
+    border:0;
+    border-radius:50%;
+    background:rgba(255,255,255,.95);
+    color:#101d3a;
+    font-size:27px;
+    cursor:pointer;
+    z-index:10;
+}
+
+.gallery-nav:hover{
+    background:#c9a227;
+    color:#fff;
+}
+
+.gallery-left{
+    left:-25px;
+}
+
+.gallery-right{
+    right:-25px;
+}
+
+.gallery-counter{
+    position:absolute;
+    top:calc(72vh + 12px);
+    left:50%;
+    transform:translateX(-50%);
+    color:#fff;
+    font-size:11px;
+    font-weight:700;
+    background:rgba(0,0,0,.45);
+    padding:6px 10px;
+    border-radius:20px;
+}
+
+.gallery-thumbs{
+    position:absolute;
+    bottom:22px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:8px;
+    max-width:90vw;
+    overflow-x:auto;
+    padding:4px;
+}
+
+.gallery-thumbs img{
+    width:70px;
+    height:50px;
+    object-fit:cover;
+    border-radius:6px;
+    opacity:.55;
+    cursor:pointer;
+    border:2px solid transparent;
+    flex:0 0 auto;
+}
+
+.gallery-thumbs img.active{
+    opacity:1;
+    border-color:#c9a227;
+}
+
+@media(max-width:700px){
+
+    .carousel-arrow{
+        width:32px;
+        height:32px;
+        font-size:18px;
+    }
+
+    .gallery-modal{
+        padding:15px;
+    }
+
+    .gallery-title{
+        top:17px;
+        left:17px;
+        right:70px;
+        font-size:12px;
+    }
+
+    .gallery-close{
+        top:12px;
+        right:12px;
+        width:40px;
+        height:40px;
+    }
+
+    .gallery-main{
+        max-width:94vw;
+        max-height:65vh;
+    }
+
+    .gallery-left{
+        left:5px;
+    }
+
+    .gallery-right{
+        right:5px;
+    }
+
+    .gallery-counter{
+        top:calc(65vh + 10px);
+    }
+
+    .gallery-thumbs{
+        bottom:10px;
+    }
+
+    .gallery-thumbs img{
+        width:58px;
+        height:42px;
+    }
+}
+
+.gallery-hint{
+    position:absolute;
+    right:12px;
+    bottom:12px;
+    background:rgba(16,29,58,.82);
+    color:#fff;
+    padding:6px 9px;
+    border-radius:6px;
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:.2px;
+    z-index:6;
+    pointer-events:none;
+}
+.whatsapp-float svg{
+    width:28px;
+    height:28px;
+    fill:currentColor;
+}
+</style>
+</head>
+<body>
+<!-- =========================================
+HEADER
+========================================= -->
+<header>
+<div class="container navbar">
+<a class="logo" href="index.html">
+<div class="logo-icon">
+    V
+</div>
+
+The Velvet<span>Stay</span>
+</a>
+<nav class="nav-links">
+<a href="index.html">
+    Home
+</a>
+<a href="stays.html">
+    Stays
+</a>
+<a href="index.html#cars-section">
+    Car Hire
+</a>
+<a href="index.html#experiences">
+    Experiences
+</a>
+<a href="index.html#about">
+    About
+</a>
+<a href="index.html#contact">
+    Contact
+</a>
+</nav>
+<button class="list-btn" onclick="listProperty()">
+    List Your Property
+</button>
+</div>
+</div>
+</header>
+<!-- =========================================
+HERO
+========================================= -->
+<section class="stays-hero">
+<div class="container">
+<div class="hero-content">
+<h1>
+    Stay somewhere<br/>
+<span>you'll love.</span>
+</h1>
+<p>
+    Discover handpicked apartments, villas, guest houses
+    and luxury B&amp;Bs across Kenya and beyond.
+</p>
+</div>
+</div>
+</section>
+<!-- =========================================
+SEARCH
+========================================= -->
+<div class="search-area">
+<div class="container">
+<div class="search-box">
+<div class="search-field">
+<label>Location</label>
+<input id="location" placeholder="Where are you going?" type="text"/>
+</div>
+<div class="search-field">
+<label>Check-in</label>
+<input id="checkin" type="date"/>
+</div>
+<div class="search-field">
+<label>Check-out</label>
+<input id="checkout" type="date"/>
+</div>
+<div class="search-field">
+<label>Guests</label>
+<select id="guests">
+<option>1 Guest</option>
+<option>2 Guests</option>
+<option>3 Guests</option>
+<option>4 Guests</option>
+<option>5 Guests</option>
+<option>6+ Guests</option>
+</select>
+</div>
+<button class="search-button" onclick="searchProperties()">
+
+Search
+
+</button>
+</div>
+</div>
+</div>
+<!-- =========================================
+PROPERTIES
+========================================= -->
+<section class="content">
+<div class="container">
+<div class="section-header">
+<div>
+<h2>
+    Available stays
+</h2>
+<p>
+    Find a place that feels like home.
+</p>
+</div>
+</div>
+<!-- FILTERS -->
+<div class="filters">
+<button class="filter active" onclick="filterProperties('all',this)">
+All stays
+</button>
+<button class="filter" onclick="filterProperties('Apartment',this)">
+Apartments
+</button>
+<button class="filter" onclick="filterProperties('Villa',this)">
+Villas
+</button>
+<button class="filter" onclick="filterProperties('B&amp;B',this)">
+B&amp;Bs
+</button>
+<button class="filter" onclick="filterProperties('Hotel',this)">
+Hotels
+</button>
+<button class="filter" onclick="filterProperties('Beach',this)">
+Beach stays
+</button>
+</div>
+<div class="property-grid" id="propertyGrid">
+<!-- PROPERTY 1 -->
+<div class="property-card" data-category="Apartment" data-location="Nairobi">
+<div class="property-image" data-gallery-images="Westlands 1.jfif||Westlands 2.jfif||Westlands 3.jfif||Westlands 4.jfif||Westlands 5.jfif||Westlands 6.jfif||Westlands 7.jfif" data-gallery-name="Velvet Executive Apartment" onclick="openGalleryFromCard(this)"><button aria-label="Previous photo" class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); changeCardImage(this,-1)" type="button">‹</button><button aria-label="Next photo" class="carousel-arrow carousel-next" onclick="event.stopPropagation(); changeCardImage(this,1)" type="button">›</button>
+
+<img src="Westlands 1.jfif"/>
+<div class="badge">
+GUEST FAVOURITE
+</div>
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<div class="carousel-counter">1 / 7</div><div class="carousel-dots"><span class="active"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div><div class="gallery-hint">View photos</div></div>
+<div class="property-info">
+<div class="location">
+📍 Westlands, Nairobi
+</div>
+<div class="property-name">
+Velvet Executive Luxury Suite
+</div>
+<div class="rating">
+<span class="star">★</span>
+<strong>4.9</strong>
+<span>
+(128 reviews)
+</span>
+</div>
+<div class="amenities">
+<span>🛏 1 Beds</span>
+<span>🚿 1 Baths</span>
+<span>📶 WiFi</span>
+<span>🏊 Pool</span>
+<span>🛏 2 guests</span>
+</div>
+<div class="property-footer">
+<div class="price">
+
+KSh 8,000
+
+<span>/ night</span>
+</div>
+<button class="book" onclick="openBooking(
+'Velvet Executive Apartment',
+8000
+)">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<!-- PROPERTY 2 -->
+<div class="property-card" data-category="Villa" data-location="Naivasha">
+<div class="property-image" data-gallery-images="Naivasha 1.jfif||Naivasha 2.jfif||Naivasha 3.jfif||Naivasha 4.jfif||Naivasha 5.jfif||Naivasha 6.jfif|" data-gallery-name="Velvet Executive Apartment" onclick="openGalleryFromCard(this)"><button aria-label="Previous photo" class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); changeCardImage(this,-1)" type="button">‹</button><button aria-label="Next photo" class="carousel-arrow carousel-next" onclick="event.stopPropagation(); changeCardImage(this,1)" type="button">›</button>
+<img src="Naivasha 1.jfif"/>
+<div class="badge">
+GUEST FAVOURITE
+</div>
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<div class="carousel-counter">1 / 6</div><div class="carousel-dots"><span class="active"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div><div class="gallery-hint">View photos</div></div>
+<div class="property-info">
+<div class="location">
+📍 Naivasha
+</div>
+<div class="property-name">
+The Cliffhanger Velvet Villa
+</div>
+<div class="rating">
+<span class="star">★</span>
+<strong>4.8</strong>
+<span>
+(94 reviews)
+</span>
+</div>
+<div class="amenities">
+<span>🛏 2 Beds</span>
+<span>🚿 2 Baths</span>
+<span>🔥 Fireplace</span>
+<span>🛏 4 guests</span>
+</div>
+<div class="property-footer">
+<div class="price">
+
+KSh 26,700
+
+<span>/ night</span>
+</div>
+<button class="book" onclick="openBooking(
+'Lakeview Velvet Villa',
+26700
+)">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<!-- PROPERTY 3 -->
+<div class="property-card" data-category="B&amp;B" data-location="Nakuru">
+<div class="property-image" data-gallery-images="Nakuru 1.jfif||Nakuru 2.jfif||Nakuru 3.jfif||Nakuru 4.jfif||Nakuru 5.jfif||Nakuru 6.jfif|" data-gallery-name="Velvet Executive Apartment" onclick="openGalleryFromCard(this)"><button aria-label="Previous photo" class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); changeCardImage(this,-1)" type="button">‹</button><button aria-label="Next photo" class="carousel-arrow carousel-next" onclick="event.stopPropagation(); changeCardImage(this,1)" type="button">›</button>
+
+<img src="Nakuru 1.jfif"/>
+<div class="badge">
+TOP RATED
+</div>
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<div class="carousel-counter">1 / 6</div><div class="carousel-dots"><span class="active"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div><div class="gallery-hint">View photos</div></div>
+<div class="property-info">
+<div class="location">
+📍 Naka, Nakuru
+</div>
+<div class="property-name">
+Velvet CW 2Br B&amp;B
+</div>
+<div class="rating">
+<span class="star">★</span>
+<strong>4.7</strong>
+<span>
+(76 reviews)
+</span>
+</div>
+<div class="amenities">
+<span>🛏 2 Bed</span>
+<span>🚿 2 Bath</span>
+<span>📶 WiFi</span>
+<span>🍳 Breakfast</span>
+<span>🛏 4 Guests</span>
+</div>
+<div class="property-footer">
+<div class="price">
+
+KSh 4,500
+
+<span>/ night</span>
+</div>
+<button class="book" onclick="openBooking(
+'Velvet Garden B&amp;B',
+4500
+)">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<!-- PROPERTY 4 -->
+<div class="property-card" data-category="Beach" data-location="Diani">
+<div class="property-image" data-gallery-images=" Diani 1.jfif|| Diani 2.jfif|| Diani 3.jfif|| Diani 4.jfif|| Diani 5.jfif|| Diani 6.jfif|" data-gallery-name="Velvet Executive Apartment" onclick="openGalleryFromCard(this)"><button aria-label="Previous photo" class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); changeCardImage(this,-1)" type="button">‹</button><button aria-label="Next photo" class="carousel-arrow carousel-next" onclick="event.stopPropagation(); changeCardImage(this,1)" type="button">›</button><img src="Diani 1.jfif"/>
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<div class="carousel-counter">1 / 6</div><div class="carousel-dots"><span class="active"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div><div class="gallery-hint">View photos</div></div>
+<div class="property-info">
+<div class="location">
+📍 Diani Beach
+</div>
+<div class="property-name">
+Vila in Kwale
+</div>
+<div class="rating">
+<span class="star">★</span>
+<strong>4.9</strong>
+<span>
+(111 reviews)
+</span>
+</div>
+<div class="amenities">
+<span>🛏 3 Beds</span>
+<span>🚿 3 Baths</span>
+<span>🏖 Beach</span>
+<span>🏊 Pool</span>
+<span>🛏 6 Guests</span>
+</div>
+<div class="property-footer">
+<div class="price">
+
+KSh 32,300
+
+<span>/ night</span>
+</div>
+<button class="book" onclick="openBooking(
+'Vila in Kwale',
+32300
+)">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<!-- PROPERTY 5 -->
+<div class="property-card" data-category="B&amp;B" data-location="Mombasa">
+<div class="property-image" data-gallery-images=" Mombasa 1.jfif|| Mombasa 2.jfif|| Mombasa 3.jfif|| Mombasa 4.jfif|| Mombasa 5.jfif|| Mombasa 6.jfif|" data-gallery-name="Velvet Executive Apartment" onclick="openGalleryFromCard(this)"><button aria-label="Previous photo" class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); changeCardImage(this,-1)" type="button">‹</button><button aria-label="Next photo" class="carousel-arrow carousel-next" onclick="event.stopPropagation(); changeCardImage(this,1)" type="button">›</button><img src="Mombasa 1.jfif"/>
+<img src="Mombasa 1.jfif"/>
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<div class="carousel-counter">1 / 6</div><div class="carousel-dots"><span class="active"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div><div class="gallery-hint">View photos</div></div>
+<div class="property-info">
+<div class="location">
+📍 Mombasa
+</div>
+<div class="property-name">
+Velvet 1BR with pool & gym
+</div>
+<div class="rating">
+<span class="star">★</span>
+<strong>4.6</strong>
+<span>
+(203 reviews)
+</span>
+</div>
+<div class="amenities">
+<span>🛏 King Bed</span>
+<span>🚿 Ensuite</span>
+<span>🍳 Breakfast</span>
+<span>🏊 Pool</span>
+<span>🛏 2 Guests</span>
+</div>
+<div class="property-footer">
+<div class="price">
+
+KSh 3,700
+
+<span>/ night</span>
+</div>
+<button class="book" onclick="openBooking(
+'Velvet 1BR with pool & gym',
+
+)">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<!-- PROPERTY 6 -->
+<div class="property-card" data-category="Apartment" data-location="Nairobi">
+<div class="property-image" data-gallery-images=" Kilimani 1.jfif|| Kilimani 2.jfif|| Kilimani 3.jfif|| Kilimani 4.jfif|| Kilimani 5.jfif|| Kilimani 6.jfif|" data-gallery-name="Velvet Executive Apartment" onclick="openGalleryFromCard(this)"><button aria-label="Previous photo" class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); changeCardImage(this,-1)" type="button">‹</button><button aria-label="Next photo" class="carousel-arrow carousel-next" onclick="event.stopPropagation(); changeCardImage(this,1)" type="button">›</button><img src="Kilimani 1.jfif"/><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<div class="carousel-counter">1 / 6</div><div class="carousel-dots"><span class="active"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div><div class="gallery-hint">View photos</div></div>
+<div class="property-info">
+<div class="location">
+📍 Kilimani, Nairobi
+</div>
+<div class="property-name">
+Velvet Luxury homes in kilimani
+</div>
+<div class="rating">
+<span class="star">★</span>
+<strong>4.9</strong>
+<span>
+(142 reviews)
+</span>
+</div>
+<div class="amenities">
+<span>🛏 2 BR</span>
+<span>🛏 2 Beds</span>
+<span>🚿 1 Baths</span>
+<span>📶 WiFi</span>
+<span>💼 Workspace</span>
+<span>🛏 2 guests</span>
+</div>
+<div class="property-footer">
+<div class="price">
+
+KSh 7,000
+
+<span>/ night</span>
+</div>
+<button class="book" onclick="openBooking(
+'Velvet Luxury homes in kilimani',
+7000
+)">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<!-- PROPERTY 7 -->
+<div class="property-card" data-category="B&amp;B" data-location="Nairobi">
+<div class="property-image" data-gallery-images=" Karen 1.jfif|| Karen 2.jfif|| Karen 3.jfif|| Karen 4.jfif|| Karen 5.jfif|| Karen 6.jfif|" data-gallery-name="Velvet Executive Apartment" onclick="openGalleryFromCard(this)"><button aria-label="Previous photo" class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); changeCardImage(this,-1)" type="button">‹</button><button aria-label="Next photo" class="carousel-arrow carousel-next" onclick="event.stopPropagation(); changeCardImage(this,1)" type="button">›</button><img src="Karen 1.jfif"/><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+<img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<div class="carousel-counter">1 / 6</div><div class="carousel-dots"><span class="active"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div><div class="gallery-hint">View photos</div></div>
+<div class="property-info">
+<div class="location">
+📍 Karen, Nairobi
+</div>
+<div class="property-name">
+Velvet Karen Guest House with views of Ngong Hills
+</div>
+<div class="rating">
+<span class="star">★</span>
+<strong>4.9</strong>
+<span>
+(61 reviews)
+</span>
+</div>
+<div class="amenities">
+<span>🛏 1 Bed</span>
+<span>🌳 Garden</span>
+<span>🍳 Breakfast</span>
+<span>🚿 1 Baths</span>
+<span>📶 WiFi</span>
+<span>🛏 2 guests</span>
+</div>
+<div class="property-footer">
+<div class="price">
+
+KSh 7,000
+
+<span>/ night</span>
+</div>
+<button class="book" onclick="openBooking(
+'Velvet Karen Guest House with views of Ngong Hills',
+7000
+)">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<!-- PROPERTY 8 -->
+<div class="property-card" data-category="Villa" data-location="Diani">
+<div class="property-image" data-gallery-images=" Kenya 1.jfif|| Kenya 2.jfif|| Kenya 3.jfif|| Kenya 4.jfif|| Kenya 5.jfif|| Kenya 6.jfif|" data-gallery-name="Velvet Executive Apartment" onclick="openGalleryFromCard(this)"><button aria-label="Previous photo" class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); changeCardImage(this,-1)" type="button">‹</button><button aria-label="Next photo" class="carousel-arrow carousel-next" onclick="event.stopPropagation(); changeCardImage(this,1)" type="button">›</button><img src="Kenya 1.jfif"/><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+<img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+<div class="badge">
+LUXURY
+</div>
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<div class="carousel-counter">1 / 6</div><div class="carousel-dots"><span class="active"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div><div class="gallery-hint">View photos</div></div>
+<div class="property-info">
+<div class="location">
+📍 Diani, Kenya
+</div>
+<div class="property-name">
+Velvet Swahli Cottage w/Private Pool 600M walk to Beach
+</div>
+<div class="rating">
+<span class="star">★</span>
+<strong>5.0</strong>
+<span>
+(48 reviews)
+</span>
+</div>
+<div class="amenities">
+<span>🛏 3 Beds</span>
+<span>🚿 2 Baths</span>
+<span>🏊 Pool</span>
+<span>🏖 Beach</span>
+<span>🛏 6 guests</span>
+<span>🍽 Kitchen</span>
+</div>
+<div class="property-footer">
+<div class="price">
+
+KSh 25,500
+
+<span>/ night</span>
+</div>
+<button class="book" onclick="openBooking(
+'Velvet Swahli Cottage w/Private Pool 600M walk to Beach',
+25500
+)">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<!-- PROPERTY 1 -->
+<div class="property-card" data-category="Villa" data-location="Nairobi">
+<div class="property-image" data-gallery-images=" turi 1.jfif|| turi 2.jfif|| turi 3.jfif|| turi 4.jfif|| turi 5.jfif|| turi 6.jfif|" data-gallery-name="Velvet Executive Apartment" onclick="openGalleryFromCard(this)"><button aria-label="Previous photo" class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); changeCardImage(this,-1)" type="button">‹</button><button aria-label="Next photo" class="carousel-arrow carousel-next" onclick="event.stopPropagation(); changeCardImage(this,1)" type="button">›</button>
+
+<img src="turi 1.jfif"/>
+<div class="badge">
+GUEST FAVOURITE
+</div>
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<div class="carousel-counter">1 / 7</div><div class="carousel-dots"><span class="active"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div><div class="gallery-hint">View photos</div></div>
+<div class="property-info">
+<div class="location">
+📍 Turi,nakuru
+</div>
+<div class="property-name">
+Velvet Turi Haven Cottage
+</div>
+<div class="rating">
+<span class="star">★</span>
+<strong>4.9</strong>
+<span>
+(128 reviews)
+</span>
+</div>
+<div class="amenities">
+<span>🛏 6 Beds</span>
+<span>🚿 5 Baths</span>
+<span>📶 WiFi</span>
+<span>🛏 5 BR</span>
+<span>🏊 Pool</span>
+<span>🛏 10 guests</span>
+</div>
+<div class="property-footer">
+<div class="price">
+
+KSh 25,000
+
+<span>/ night</span>
+</div>
+<button class="book" onclick="openBooking(
+'Velvet Turi Haven Cottage',
+25000
+)">
+Book Now
+</button>
+
+</div>
+</div>
+</div>
+<!-- PROPERTY 1 -->
+<div class="property-card" data-category="Apartment" data-location="Nairobi">
+<div class="property-image" data-gallery-images=" molo 1.jfif|| molo 2.jfif|| molo 3.jfif|| molo 4.jfif|| molo 5.jfif|| molo 6.jfif|" data-gallery-name="Velvet Executive Apartment" onclick="openGalleryFromCard(this)"><button aria-label="Previous photo" class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); changeCardImage(this,-1)" type="button">‹</button><button aria-label="Next photo" class="carousel-arrow carousel-next" onclick="event.stopPropagation(); changeCardImage(this,1)" type="button">›</button>
+
+<img src="molo 1.jfif"/>
+<div class="badge">
+GUEST FAVOURITE
+</div>
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<div class="carousel-counter">1 / 7</div><div class="carousel-dots"><span class="active"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div><div class="gallery-hint">View photos</div></div>
+<div class="property-info">
+<div class="location">
+📍 molo,nakuru
+</div>
+<div class="property-name">
+Velvet Homes molo 1br
+</div>
+<div class="rating">
+<span class="star">★</span>
+<strong>4.9</strong>
+<span>
+(128 reviews)
+</span>
+</div>
+<div class="amenities">
+<span>🛏 1 Beds</span>
+<span>🚿 1 Baths</span>
+<span>📶 WiFi</span>
+<span>🛏 1 BR</span>
+<span>🛏 2 guests</span>
+</div>
+<div class="property-footer">
+<div class="price">
+
+KSh 3,000
+
+<span>/ night</span>
+</div>
+<button class="book" onclick="openBooking(
+'Velvet Turi Haven Cottage',
+3000
+)">
+Book Now
+</button>
+
+</div>
+</div>
+</div>
+<div class="property-card" data-category="Apartment" data-location="Nairobi">
+<div class="property-image" data-gallery-images=" Elburgon 1.jfif|| Elburgon 2.jfif|| Elburgon 3.jfif|| Elburgon 4.jfif|| Elburgon 5.jfif|" data-gallery-name="Velvet Executive Apartment" onclick="openGalleryFromCard(this)"><button aria-label="Previous photo" class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); changeCardImage(this,-1)" type="button">‹</button><button aria-label="Next photo" class="carousel-arrow carousel-next" onclick="event.stopPropagation(); changeCardImage(this,1)" type="button">›</button>
+
+<img src="Elburgon 5.jfif"/>
+<div class="badge">
+GUEST FAVOURITE
+</div>
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<div class="carousel-counter">1 / 7</div><div class="carousel-dots"><span class="active"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div><div class="gallery-hint">View photos</div></div>
+<div class="property-info">
+<div class="location">
+📍 Elburgon,nakuru
+</div>
+<div class="property-name">
+Velvet Homes Elburgon
+</div>
+<div class="rating">
+<span class="star">★</span>
+<strong>4.8</strong>
+<span>
+(128 reviews)
+</span>
+</div>
+<div class="amenities">
+<span>🛏 2 Beds</span>
+<span>🚿 1 Baths</span>
+<span>📶 WiFi</span>
+<span>🛏 1 BR</span>
+<span>🛏 4 guests</span>
+</div>
+<div class="property-footer">
+<div class="price">
+
+KSh 3,000
+
+<span>/ night</span>
+</div>
+<button class="book" onclick="openBooking(
+'Velvet Homes Elburgon',
+3000
+)">
+Book Now
+</button>
+
+</div>
+</div>
+</div>
+<div class="property-card" data-category="Villa" data-location="Nairobi">
+<div class="property-image" data-gallery-images=" watamu 1.jfif|| watamu 2.jfif|| watamu 3.jfif|| watamu 4.jfif|| watamu 5.jfif|| watamu 6.jfif|| watamu 7.jfif|| watamu 8.jfif|| watamu 9.jfif|" data-gallery-name="Velvet Executive Apartment" onclick="openGalleryFromCard(this)"><button aria-label="Previous photo" class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); changeCardImage(this,-1)" type="button">‹</button><button aria-label="Next photo" class="carousel-arrow carousel-next" onclick="event.stopPropagation(); changeCardImage(this,1)" type="button">›</button>
+
+<img src="watamu 1.jfif"/>
+<div class="badge">
+GUEST FAVOURITE
+</div>
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<div class="carousel-counter">1 / 8</div><div class="carousel-dots"><span class="active"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div><div class="gallery-hint">View photos</div></div>
+<div class="property-info">
+<div class="location">
+📍 watamu,kenya
+</div>
+<div class="property-name">
+Velvet 5*Luxury Villa|Private Pool| Walk to the beach 
+</div>
+<div class="rating">
+<span class="star">★</span>
+<strong>4.8</strong>
+<span>
+(128 reviews)
+</span>
+</div>
+<div class="amenities">
+<span>🛏 2 Beds</span>
+<span>🚿 1 Baths</span>
+<span>📶 WiFi</span>
+<span>🛏 1 BR</span>
+<span>🛏 4 guests</span>
+</div>
+<div class="property-footer">
+<div class="price">
+
+KSh 50,800
+
+<span>/ night</span>
+</div>
+<button class="book" onclick="openBooking(
+'Velvet 5*Luxury Villa',
+50800
+)">
+Book Now
+</button>
+
+</div>
+</div>
+</div>
+<div class="property-card" data-category="B&amp;B" data-location="Nairobi">
+<div class="property-image" data-gallery-images=" malindi 1.jfif|| malindi 2.jfif|| malindi 3.jfif|| malindi 4.jfif|| malindi 5.jfif|| malindi 6.jfif|| malindi 7.jfif|" data-gallery-name="Velvet Executive Apartment" onclick="openGalleryFromCard(this)"><button aria-label="Previous photo" class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); changeCardImage(this,-1)" type="button">‹</button><button aria-label="Next photo" class="carousel-arrow carousel-next" onclick="event.stopPropagation(); changeCardImage(this,1)" type="button">›</button>
+
+<img src="malindi 1.jfif"/>
+
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<div class="carousel-counter">1 / 8</div><div class="carousel-dots"><span class="active"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div><div class="gallery-hint">View photos</div></div>
+<div class="property-info">
+<div class="location">
+📍 malindi,kenya
+</div>
+<div class="property-name">
+Velvet Swahili Cottage by the quiet beach 
+</div>
+<div class="rating">
+<span class="star">★</span>
+<strong>4.8</strong>
+<span>
+(128 reviews)
+</span>
+</div>
+<div class="amenities">
+<span>🛏 4 Beds</span>
+<span>🚿 1 Baths</span>
+<span>📶 WiFi</span>
+<span>🛏 1 BR</span>
+<span>🛏 3 guests</span>
+</div>
+<div class="property-footer">
+<div class="price">
+
+KSh 3,500
+
+<span>/ night</span>
+</div>
+<button class="book" onclick="openBooking(
+'Velvet Swahili Cottage by the quiet beach',
+3500
+)">
+Book Now
+</button>
+
+</div>
+</div>
+</div>
+<div class="property-card" data-category="B&amp;B" data-location="Nairobi">
+<div class="property-image" data-gallery-images=" kiamunyi 1.jfif|| kiamunyi 2.jfif|| kiamunyi 3.jfif|| kiamunyi 4.jfif|| kiamunyi 5.jfif|| kiamunyi 6.jfif|| kiamunyi 7.jfif|" data-gallery-name="Velvet Executive Apartment" onclick="openGalleryFromCard(this)"><button aria-label="Previous photo" class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); changeCardImage(this,-1)" type="button">‹</button><button aria-label="Next photo" class="carousel-arrow carousel-next" onclick="event.stopPropagation(); changeCardImage(this,1)" type="button">›</button>
+
+<img src="kiamunyi 1.jfif"/>
+
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<div class="carousel-counter">1 / 8</div><div class="carousel-dots"><span class="active"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div><div class="gallery-hint">View photos</div></div>
+<div class="property-info">
+<div class="location">
+📍 kimunyi,nakuru
+</div>
+<div class="property-name">
+Velvet 1BR Apartment|Olive,Kiamunyi|Wine included 
+</div>
+<div class="rating">
+<span class="star">★</span>
+<strong>4.8</strong>
+<span>
+(128 reviews)
+</span>
+</div>
+<div class="amenities">
+<span>🛏 1 Beds</span>
+<span>🚿 1 Baths</span>
+<span>📶 WiFi</span>
+<span>🛏 1 BR</span>
+<span>🛏 2 guests</span>
+</div>
+<div class="property-footer">
+<div class="price">
+
+KSh 3,500
+
+<span>/ night</span>
+</div>
+<button class="book" onclick="openBooking(
+'Velvet 1BR Apartment',
+3500
+)">
+Book Now
+</button>
+
+</div>
+</div>
+</div>
+<div class="property-card" data-category="Hotel" data-location="Nairobi">
+<div class="property-image" data-gallery-images=" garden 1.jfif|| garden 2.jfif|| garden 3.jfif|| garden 4.jfif|| garden 5.jfif|| garden 6.jfif|| garden 7.jfif|" data-gallery-name="Velvet Executive Apartment" onclick="openGalleryFromCard(this)"><button aria-label="Previous photo" class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); changeCardImage(this,-1)" type="button">‹</button><button aria-label="Next photo" class="carousel-arrow carousel-next" onclick="event.stopPropagation(); changeCardImage(this,1)" type="button">›</button>
+
+<img src="garden 1.jfif"/>
+<div class="badge">
+GUEST FAVOURITE
+</div>
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<div class="carousel-counter">1 / 8</div><div class="carousel-dots"><span class="active"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div><div class="gallery-hint">View photos</div></div>
+<div class="property-info">
+<div class="location">
+📍 Garden Estate,Nairobi
+</div>
+<div class="property-name">
+Velvet Garden Estate
+</div>
+<div class="rating">
+<span class="star">★</span>
+<strong>4.8</strong>
+<span>
+(128 reviews)
+</span>
+</div>
+<div class="amenities">
+<span>🛏 1 Beds</span>
+<span>🚿 1 Baths</span>
+<span>📶 WiFi</span>
+<span>🛏 1 BR</span>
+<span>🛏 2 guests</span>
+</div>
+<div class="property-footer">
+<div class="price">
+
+KSh 3,600
+
+<span>/ night</span>
+</div>
+<button class="book" onclick="openBooking(
+'Velvet Garden Estate',
+3600
+)">
+Book Now
+</button>
+
+</div>
+</div>
+</div>
+<div class="property-card" data-category="Hotel" data-location="Nairobi">
+<div class="property-image" data-gallery-images=" mutamaiyu 1.jfif|| mutamaiyu 2.jfif|| mutamaiyu 3.jfif|| mutamaiyu 4.jfif|| mutamaiyu 5.jfif|| mutamaiyu 6.jfif|| mutamaiyu 7.jfif|" data-gallery-name="Velvet Executive Apartment" onclick="openGalleryFromCard(this)"><button aria-label="Previous photo" class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); changeCardImage(this,-1)" type="button">‹</button><button aria-label="Next photo" class="carousel-arrow carousel-next" onclick="event.stopPropagation(); changeCardImage(this,1)" type="button">›</button>
+
+<img src="mutamaiyu 1.jfif"/>
+
+<button class="favorite" onclick="event.stopPropagation()">
+♡
+</button>
+<div class="carousel-counter">1 / 8</div><div class="carousel-dots"><span class="active"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div><div class="gallery-hint">View photos</div></div>
+<div class="property-info">
+<div class="location">
+📍 Mutamaiyu Cottage,Nairobi
+</div>
+<div class="property-name">
+Velvet Mutamaiyu Cottage
+</div>
+<div class="rating">
+<span class="star">★</span>
+<strong>4.8</strong>
+<span>
+(128 reviews)
+</span>
+</div>
+<div class="amenities">
+<span>🛏 2 Beds</span>
+<span>🚿 1 Baths</span>
+<span>📶 WiFi</span>
+<span>🛏 2 BR</span>
+<span>🛏 4 guests</span>
+</div>
+<div class="property-footer">
+<div class="price">
+
+KSh 12,000
+
+<span>/ night</span>
+</div>
+<button class="book" onclick="openBooking(
+'Velvet Mutamaiyu Cottage',
+12000
+)">
+Book Now
+</button>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- =========================================
+PROMO
+========================================= -->
+<div class="promo">
+<div>
+<h2>
+Your perfect stay is waiting.
+</h2>
+<p>
+Whether you're travelling for business, a weekend getaway
+or a family holiday, discover a Velvet Stay made for you.
+</p>
+</div>
+<button onclick="window.location.href='index.html'">
+
+Explore Car Hire
+
+</button>
+</div>
+</div>
+</section>
+<!-- =========================================
+FOOTER
+========================================= -->
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="footer-logo">
+The Velvet<span>Stay</span>
+</div>
+<p class="footer-about">
+
+Premium stays and reliable mobility
+for travellers looking for comfort,
+quality and convenience.
+
+</p>
+</div>
+<div>
+<h4>
+Explore
+</h4>
+<a href="index.html">
+Home
+</a>
+<a href="stays.html">
+Stays
+</a>
+<a href="index.html#cars-section">
+Car Hire
+</a>
+<a href="#">
+Experiences
+</a>
+</div>
+<div>
+<h4>
+Popular locations
+</h4>
+<a href="#">
+Nairobi
+</a>
+<a href="#">
+Naivasha
+</a>
+<a href="#">
+Nakuru
+</a>
+<a href="#">
+Mombasa
+</a>
+<a href="#">
+Diani
+</a>
+</div>
+<div>
+<h4>
+Contact
+</h4>
+<a href="#">
++254 782 125 869
+</a>
+<a href="#">
+thevelvetstay0056.com
+</a>
+<a href="#">
+Nairobi, Kenya
+</a>
+</div>
+</div>
+<div class="copyright">
+<span>
+© 2026 The Velvet Stay
+</span>
+<span>
+Privacy · Terms · Cookies
+</span>
+</div>
+</div>
+</footer>
+<!-- =========================================
+BOOKING MODAL
+========================================= -->
+<div class="modal" id="bookingModal">
+<div class="modal-box">
+<div class="modal-header">
+<h3>
+Reserve your stay
+</h3>
+<button class="close" onclick="closeBooking()">
+×
+</button>
+</div>
+<div class="modal-body">
+<div class="booking-property">
+<strong id="bookingName">
+Velvet Executive Apartment
+</strong>
+<span>
+KSh <span id="nightPrice">8,500</span> / night
+</span>
+</div>
+<div class="form-grid">
+<div class="form-group">
+<label>
+Full Name
+</label>
+<input id="customerName" placeholder="Your name" type="text"/>
+</div>
+<div class="form-group">
+<label>
+Phone Number
+</label>
+<input id="customerPhone" placeholder="+254..." type="tel"/>
+</div>
+<div class="form-group">
+<label>
+Check-in
+</label>
+<input id="bookingStart" type="date"/>
+</div>
+<div class="form-group">
+<label>
+Check-out
+</label>
+<input id="bookingEnd" type="date"/>
+</div>
+<div class="form-group">
+<label>
+Guests
+</label>
+<select id="bookingGuests">
+<option>1 Guest</option>
+<option>2 Guests</option>
+<option>3 Guests</option>
+<option>4 Guests</option>
+<option>5 Guests</option>
+<option>6+ Guests</option>
+</select>
+</div>
+<div class="form-group">
+<label>
+Room preference
+</label>
+<select>
+<option>Standard</option>
+<option>Premium</option>
+<option>Deluxe</option>
+</select>
+</div>
+<div class="form-group full">
+<label>
+Special request
+</label>
+<input id="specialRequest" placeholder="Anything we should know?" type="text"/>
+</div>
+</div>
+<div class="total">
+<span>
+Estimated total
+</span>
+<strong id="totalPrice">
+KSh 8,500
+</strong>
+</div>
+<button class="whatsapp" onclick="sendBooking()">
+
+💬 Continue on WhatsApp
+
+</button>
+</div>
+</div>
+</div>
+<!-- FLOATING WHATSAPP -->
+<a class="whatsapp-float"
+   href="https://wa.me/254782125869"
+   target="_blank"
+   aria-label="Chat with The Velvet Stay on WhatsApp">
+
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path fill="currentColor"
+              d="M19.11 17.37c-.28-.14-1.65-.81-1.91-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.16.19-.33.21-.61.07-.28-.14-1.17-.43-2.23-1.38-.82-.73-1.38-1.63-1.54-1.9-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.49.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.47-.64-.48h-.54c-.19 0-.49.07-.75.35-.26.28-.98.96-.98 2.34s1 2.72 1.14 2.91c.14.19 1.96 2.99 4.75 4.19.66.28 1.17.45 1.57.58.66.21 1.26.18 1.73.11.53-.08 1.65-.68 1.88-1.33.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/>
+        <path fill="currentColor"
+              d="M16.02 3.2c-7.07 0-12.82 5.75-12.82 12.82 0 2.26.59 4.46 1.71 6.4L3.1 28.8l6.53-1.71a12.77 12.77 0 0 0 6.39 1.72h.01c7.06 0 12.81-5.75 12.81-12.82S23.08 3.2 16.02 3.2zm0 23.4h-.01a10.57 10.57 0 0 1-5.39-1.47l-.39-.23-3.87 1.01 1.03-3.77-.25-.39a10.57 10.57 0 1 1 8.88 4.85z"/>
+    </svg>
+
+</a>
+</a>
+
+<!-- =========================================
+     FULL SCREEN IMAGE GALLERY
+========================================= -->
+<div aria-hidden="true" class="gallery-modal" id="galleryModal">
+<button aria-label="Close gallery" class="gallery-close" onclick="closeGallery()" type="button">
+        ×
+    </button>
+<div class="gallery-title" id="galleryTitle">
+        The Velvet Stay
+    </div>
+<div class="gallery-stage">
+<button aria-label="Previous image" class="gallery-nav gallery-left" onclick="galleryMove(-1)" type="button">
+            ‹
+        </button>
+<img alt="Property photo" class="gallery-main" id="galleryMain" src=""/>
+<button aria-label="Next image" class="gallery-nav gallery-right" onclick="galleryMove(1)" type="button">
+            ›
+        </button>
+<div class="gallery-counter" id="galleryCounter">
+            1 / 1
+        </div>
+</div>
+<div class="gallery-thumbs" id="galleryThumbs"></div>
+</div>
+<script>
+/* =========================================
+   PROPERTY CAROUSEL + FULL SCREEN GALLERY
+========================================= */
+
+let galleryImages = [];
+let galleryIndex = 0;
+
+function getCardImages(wrapper){
+    return (wrapper.dataset.galleryImages || "")
+        .split("||")
+        .filter(Boolean);
+}
+
+function changeCardImage(button, direction){
+
+    const wrapper = button.closest(".property-image");
+    const img = wrapper.querySelector("img");
+    const images = getCardImages(wrapper);
+
+    if(!images.length) return;
+
+    let index = Number(wrapper.dataset.carouselIndex || 0);
+
+    index += direction;
+
+    if(index < 0){
+        index = images.length - 1;
+    }
+
+    if(index >= images.length){
+        index = 0;
+    }
+
+    wrapper.dataset.carouselIndex = index;
+
+    img.src = images[index];
+
+    const counter = wrapper.querySelector(".carousel-counter");
+
+    if(counter){
+        counter.textContent =
+            (index + 1) + " / " + images.length;
+    }
+
+    const dots = wrapper.querySelectorAll(".carousel-dots span");
+
+    dots.forEach((dot,i) => {
+        dot.classList.toggle("active", i === index);
+    });
+}
+
+function openGalleryFromCard(wrapper){
+
+    galleryImages = getCardImages(wrapper);
+    galleryIndex = Number(wrapper.dataset.carouselIndex || 0);
+
+    const title =
+        wrapper.dataset.galleryName || "The Velvet Stay";
+
+    if(!galleryImages.length) return;
+
+    document.getElementById("galleryTitle").textContent = title;
+
+    buildGalleryThumbs();
+    updateGallery();
+
+    const modal = document.getElementById("galleryModal");
+
+    modal.classList.add("show");
+    modal.setAttribute("aria-hidden","false");
+
+    document.body.style.overflow = "hidden";
+}
+
+function updateGallery(){
+
+    const main =
+        document.getElementById("galleryMain");
+
+    main.src = galleryImages[galleryIndex];
+
+    main.alt =
+        document.getElementById("galleryTitle").textContent +
+        " photo " +
+        (galleryIndex + 1);
+
+    document.getElementById("galleryCounter").textContent =
+        (galleryIndex + 1) +
+        " / " +
+        galleryImages.length;
+
+    document
+        .querySelectorAll("#galleryThumbs img")
+        .forEach((thumb,i) => {
+            thumb.classList.toggle(
+                "active",
+                i === galleryIndex
+            );
+        });
+}
+
+function buildGalleryThumbs(){
+
+    const container =
+        document.getElementById("galleryThumbs");
+
+    container.innerHTML = "";
+
+    galleryImages.forEach((src,index) => {
+
+        const thumb =
+            document.createElement("img");
+
+        thumb.src = src;
+        thumb.alt = "Thumbnail " + (index + 1);
+
+        thumb.onclick = function(){
+            galleryIndex = index;
+            updateGallery();
+        };
+
+        container.appendChild(thumb);
+    });
+}
+
+function galleryMove(direction){
+
+    if(!galleryImages.length) return;
+
+    galleryIndex += direction;
+
+    if(galleryIndex < 0){
+        galleryIndex = galleryImages.length - 1;
+    }
+
+    if(galleryIndex >= galleryImages.length){
+        galleryIndex = 0;
+    }
+
+    updateGallery();
+}
+
+function closeGallery(){
+
+    const modal =
+        document.getElementById("galleryModal");
+
+    modal.classList.remove("show");
+    modal.setAttribute("aria-hidden","true");
+
+    document.body.style.overflow = "";
+}
+
+/* Close when clicking the dark background */
+document
+    .getElementById("galleryModal")
+    .addEventListener("click",function(e){
+
+        if(e.target === this){
+            closeGallery();
+        }
+
+    });
+
+/* Keyboard controls */
+document.addEventListener("keydown",function(e){
+
+    const modal =
+        document.getElementById("galleryModal");
+
+    if(!modal.classList.contains("show")) return;
+
+    if(e.key === "Escape"){
+        closeGallery();
+    }
+
+    if(e.key === "ArrowLeft"){
+        galleryMove(-1);
+    }
+
+    if(e.key === "ArrowRight"){
+        galleryMove(1);
+    }
+
+});
+
+/* Touch/swipe controls */
+let galleryTouchStartX = 0;
+
+document
+    .getElementById("galleryMain")
+    .addEventListener("touchstart",function(e){
+
+        galleryTouchStartX =
+            e.changedTouches[0].screenX;
+
+    },{passive:true});
+
+document
+    .getElementById("galleryMain")
+    .addEventListener("touchend",function(e){
+
+        const endX =
+            e.changedTouches[0].screenX;
+
+        const distance =
+            endX - galleryTouchStartX;
+
+        if(Math.abs(distance) < 45) return;
+
+        if(distance < 0){
+            galleryMove(1);
+        }else{
+            galleryMove(-1);
+        }
+
+    },{passive:true});
+
+
+
+
+
+/* =========================================
+WHATSAPP NUMBER
+========================================= */
+
+const whatsappNumber = "254782125869";
+
+
+let selectedProperty = "";
+let selectedPrice = 0;
+
+
+/* =========================================
+FILTER
+========================================= */
+
+function filterProperties(category,button){
+
+    document
+    .querySelectorAll(".filter")
+    .forEach(btn =>
+        btn.classList.remove("active")
+    );
+
+    button.classList.add("active");
+
+
+    document
+    .querySelectorAll(".property-card")
+    .forEach(card => {
+
+        if(
+            category === "all" ||
+            card.dataset.category === category
+        ){
+
+            card.style.display = "block";
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* =========================================
+SEARCH
+========================================= */
+
+function searchProperties(){
+
+    const location =
+    document
+    .getElementById("location")
+    .value
+    .toLowerCase()
+    .trim();
+
+
+    const cards =
+    document.querySelectorAll(".property-card");
+
+
+    let found = false;
+
+
+    cards.forEach(card => {
+
+        const propertyLocation =
+        card.dataset.location
+        .toLowerCase();
+
+
+        if(
+            location === "" ||
+            propertyLocation.includes(location)
+        ){
+
+            card.style.display = "block";
+
+            found = true;
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    document
+    .querySelector(".content")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+
+    if(!found && location){
+
+        alert(
+            "No stays found for " +
+            location +
+            ". Try another destination."
+        );
+
+    }
+
+}
+
+
+/* =========================================
+OPEN BOOKING
+========================================= */
+
+function openBooking(name,price){
+
+    selectedProperty = name;
+
+    selectedPrice = price;
+
+
+    document
+    .getElementById("bookingName")
+    .textContent = name;
+
+
+    document
+    .getElementById("nightPrice")
+    .textContent =
+    price.toLocaleString();
+
+
+    document
+    .getElementById("totalPrice")
+    .textContent =
+    "KSh " +
+    price.toLocaleString();
+
+
+    document
+    .getElementById("bookingModal")
+    .classList.add("show");
+
+
+    calculateTotal();
+
+}
+
+
+/* =========================================
+CLOSE BOOKING
+========================================= */
+
+function closeBooking(){
+
+    document
+    .getElementById("bookingModal")
+    .classList.remove("show");
+
+}
+
+
+/* =========================================
+CALCULATE TOTAL
+========================================= */
+
+function calculateTotal(){
+
+    const start =
+    document
+    .getElementById("bookingStart")
+    .value;
+
+
+    const end =
+    document
+    .getElementById("bookingEnd")
+    .value;
+
+
+    let nights = 1;
+
+
+    if(start && end){
+
+        const startDate =
+        new Date(start);
+
+
+        const endDate =
+        new Date(end);
+
+
+        const difference =
+        endDate - startDate;
+
+
+        nights =
+        Math.ceil(
+            difference /
+            (1000 * 60 * 60 * 24)
+        );
+
+
+        if(nights < 1){
+
+            nights = 1;
+
+        }
+
+    }
+
+
+    const total =
+    selectedPrice * nights;
+
+
+    document
+    .getElementById("totalPrice")
+    .textContent =
+    "KSh " +
+    total.toLocaleString();
+
+}
+
+
+document
+.getElementById("bookingStart")
+.addEventListener(
+    "change",
+    calculateTotal
+);
+
+
+document
+.getElementById("bookingEnd")
+.addEventListener(
+    "change",
+    calculateTotal
+);
+
+
+/* =========================================
+WHATSAPP BOOKING
+========================================= */
+
+function sendBooking(){
+
+    const name =
+    document
+    .getElementById("customerName")
+    .value;
+
+
+    const phone =
+    document
+    .getElementById("customerPhone")
+    .value;
+
+
+    const start =
+    document
+    .getElementById("bookingStart")
+    .value;
+
+
+    const end =
+    document
+    .getElementById("bookingEnd")
+    .value;
+
+
+    const guests =
+    document
+    .getElementById("bookingGuests")
+    .value;
+
+
+    const request =
+    document
+    .getElementById("specialRequest")
+    .value;
+
+
+    if(
+        !name ||
+        !phone ||
+        !start ||
+        !end
+    ){
+
+        alert(
+            "Please complete your name, phone number and dates."
+        );
+
+        return;
+
+    }
+
+
+    const total =
+    document
+    .getElementById("totalPrice")
+    .textContent;
+
+
+    const message =
+
+`Hello The Velvet Stay,
+
+I would like to book a stay.
+
+*Property:* ${selectedProperty}
+
+*Guest Name:* ${name}
+
+*Phone:* ${phone}
+
+*Check-in:* ${start}
+
+*Check-out:* ${end}
+
+*Guests:* ${guests}
+
+*Estimated Total:* ${total}
+
+*Special Request:* ${request || "None"}
+
+Please confirm availability and booking details.
+
+Thank you.`;
+
+
+    const url =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(message);
+
+
+    window.open(url,"_blank");
+
+}
+
+
+/* =========================================
+LIST PROPERTY
+========================================= */
+
+function listProperty(){
+
+    const message =
+    "Hello The Velvet Stay. I would like to list my property on your platform.";
+
+
+    const url =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(message);
+
+
+    window.open(url,"_blank");
+
+}
+
+
+/* =========================================
+CLOSE MODAL OUTSIDE
+========================================= */
+
+document
+.getElementById("bookingModal")
+.addEventListener(
+    "click",
+    function(e){
+
+        if(e.target === this){
+
+            closeBooking();
+
+        }
+
+    }
+);
+
+</script>
+</body>
+</html>
