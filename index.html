@@ -1271,42 +1271,62 @@ footer{
 <!-- =========================================================
      HEADER
 ========================================================= -->
-
 <header>
+  <div class="container navbar">
 
-<div class="container navbar">
+    <a href="#top" class="logo">
+      <div class="logo-icon">V</div>
+      The Velvet<span>Stay</span>
+    </a>
 
-<a href="index.html" class="logo">
-    <div class="logo-icon">V</div>
-    The Velvet<span>Stay</span>
-</a>
-<nav class="nav-links">
+    <nav class="nav-links" id="navLinks">
 
-<a href="stays.html">Stays</a>
-
-<a href="#cars-section" onclick="showCars(); return false;">
+      <a href="#stays" onclick="closeMobileMenu()">
+        Stays
+      </a>
+<a href="#cars-section" onclick="showCars(); closeMobileMenu(); return false;">
     Car Hire
 </a>
-<a href="#experiences">Experiences</a>
 
-<a href="#about">About</a>
+      <a href="#experiences" onclick="closeMobileMenu()">
+        Experiences
+      </a>
 
-<a href="#contact">Contact</a>
+      <a href="#about" onclick="closeMobileMenu()">
+        About
+      </a>
 
-</nav>
+      <a href="#contact" onclick="closeMobileMenu()">
+        Contact
+      </a>
 
+    </nav>
 
-</div>
+    <div class="nav-right">
 
-<button class="menu-btn" onclick="mobileMenu()">
-    ☰
-</button>
+      <a href="#" 
+         class="sign-in"
+         onclick="alert('Sign-in will be available soon.'); return false;">
+        Sign In
+      </a>
 
-</div>
+      <button class="list-property" onclick="listProperty()">
+        List Property
+      </button>
 
+    </div>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      onclick="mobileMenu()"
+      aria-label="Open navigation menu"
+      aria-expanded="false">
+      ☰
+    </button>
+
+  </div>
 </header>
-
-
 
 <!-- =========================================================
      HERO
@@ -1364,7 +1384,7 @@ footer{
 
 </div>
 
-<a href="#" class="view-all">
+<a href="#stays" class="view-all">
     View all stays →
 </a>
 
@@ -1816,11 +1836,14 @@ View Details
     </div>
 
 </div>
+</div>
+
+</section>
+
 <!-- =========================================================
      CAR HIRE
 ========================================================= -->
-
-<section class="section" id="cars-section">
+<section id="cars-section">
 
 <div class="container">
 
@@ -2027,7 +2050,6 @@ Book Now
 </div>
 
 </div>
-
 
 <!-- CAR 4 -->
 
@@ -2620,7 +2642,7 @@ Book Now
 
 </div>
 
-</div>
+
 
 </section>
 
@@ -2843,10 +2865,10 @@ Book a beautiful stay, hire a reliable vehicle,
 and enjoy your trip without the stress.
 </p>
 
-<button class="cta-btn" onclick="showCars()">
+<!-- Hero CTA -->
+<button type="button" class="cta-btn" onclick="showCars()">
     Explore Car Hire
 </button>
-
 </div>
 
 </div>
@@ -2886,7 +2908,7 @@ and enjoy your trip without the stress.
 
 <a href="stays.html">Stays</a>
 
-<a href="#cars-section" onclick="showCars(); return false;">
+<a href="javascript:void(0);" onclick="showCars()">
     Car Hire
 </a>
 
@@ -3173,33 +3195,31 @@ function switchSearch(type){
 /* =========================================================
    SHOW CARS
 ========================================================= */
-function showCars(){
-
+function showCars() {
     const staysSection = document.getElementById("stays");
     const carsSection = document.getElementById("cars-section");
 
-    if(!carsSection){
-        console.error("Car Hire section was not found.");
+    if (!carsSection) {
+        console.error("ERROR: #cars-section was not found.");
         return;
     }
 
-    if(staysSection){
+    // Hide stays
+    if (staysSection) {
         staysSection.style.display = "none";
     }
 
+    // Show car hire
     carsSection.style.display = "block";
 
-    setTimeout(function(){
-
+    // Scroll to car hire
+    setTimeout(() => {
         carsSection.scrollIntoView({
             behavior: "smooth",
             block: "start"
         });
-
-    }, 50);
-
-}
-/* =========================================================
+    }, 100);
+}/* =========================================================
    SHOW STAYS
 ========================================================= */
 
@@ -3606,15 +3626,18 @@ function listProperty(){
 /* =========================================================
    MOBILE MENU
 ========================================================= */
+/* =========================================================
+   MOBILE MENU
+========================================================= */
 
 function mobileMenu(){
 
     const links =
     document.querySelector(".nav-links");
 
-    if(
-        links.style.display === "flex"
-    ){
+    if(!links) return;
+
+    if(links.style.display === "flex"){
 
         links.style.display = "none";
 
@@ -3637,6 +3660,16 @@ function mobileMenu(){
 }
 
 
+function closeMobileMenu(){
+
+    const links =
+    document.querySelector(".nav-links");
+
+    if(links){
+        links.style.display = "none";
+    }
+
+}
 
 /* =========================================================
    CLOSE MODAL WHEN CLICKING OUTSIDE
