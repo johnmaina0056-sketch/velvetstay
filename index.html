@@ -1131,6 +1131,44 @@ footer{
 
 }
 
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+@media(max-width:800px){
+    .navbar{
+        position:relative;
+    }
+
+    .nav-links.mobile-open{
+        display:flex;
+        position:absolute;
+        top:70px;
+        left:0;
+        right:0;
+        z-index:1100;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:10px 20px 18px;
+        background:#fff;
+        border-top:1px solid var(--border);
+        box-shadow:0 12px 25px rgba(16,29,58,.12);
+    }
+
+    .nav-links.mobile-open a{
+        display:block;
+        padding:14px 4px;
+        border-bottom:1px solid #eef0f3;
+        font-size:15px;
+    }
+
+    .nav-links.mobile-open a:last-child{
+        border-bottom:0;
+    }
+}
+
 @media(max-width:800px){
 
     header,
@@ -1271,42 +1309,62 @@ footer{
 <!-- =========================================================
      HEADER
 ========================================================= -->
-
 <header>
+  <div class="container navbar">
 
-<div class="container navbar">
+    <a href="#top" class="logo">
+      <div class="logo-icon">V</div>
+      The Velvet<span>Stay</span>
+    </a>
 
-<a href="index.html" class="logo">
-    <div class="logo-icon">V</div>
-    The Velvet<span>Stay</span>
-</a>
-<nav class="nav-links">
+    <nav class="nav-links" id="navLinks">
 
-<a href="stays.html">Stays</a>
-
-<a href="#cars-section" onclick="showCars(); return false;">
+      <a href="#stays" onclick="showStays(); closeMobileMenu(); return false;">
+        Stays
+      </a>
+<a href="#cars-section" onclick="showCars(); closeMobileMenu(); return false;">
     Car Hire
 </a>
-<a href="#experiences">Experiences</a>
 
-<a href="#about">About</a>
+      <a href="#experiences" onclick="closeMobileMenu()">
+        Experiences
+      </a>
 
-<a href="#contact">Contact</a>
+      <a href="#about" onclick="closeMobileMenu()">
+        About
+      </a>
 
-</nav>
+      <a href="#contact" onclick="closeMobileMenu()">
+        Contact
+      </a>
 
+    </nav>
 
-</div>
+    <div class="nav-right">
 
-<button class="menu-btn" onclick="mobileMenu()">
-    ☰
-</button>
+      <a href="#" 
+         class="sign-in"
+         onclick="alert('Sign-in will be available soon.'); return false;">
+        Sign In
+      </a>
 
-</div>
+      <button class="list-property" onclick="listProperty()">
+        List Property
+      </button>
 
+    </div>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      onclick="mobileMenu()"
+      aria-label="Open navigation menu"
+      aria-expanded="false">
+      ☰
+    </button>
+
+  </div>
 </header>
-
-
 
 <!-- =========================================================
      HERO
@@ -1364,7 +1422,7 @@ footer{
 
 </div>
 
-<a href="#" class="view-all">
+<a href="#stays" class="view-all">
     View all stays →
 </a>
 
@@ -1816,11 +1874,14 @@ View Details
     </div>
 
 </div>
+</div>
+
+</section>
+
 <!-- =========================================================
      CAR HIRE
 ========================================================= -->
-
-<section class="section" id="cars-section">
+<section id="cars-section">
 
 <div class="container">
 
@@ -2027,7 +2088,6 @@ Book Now
 </div>
 
 </div>
-
 
 <!-- CAR 4 -->
 
@@ -2620,7 +2680,7 @@ Book Now
 
 </div>
 
-</div>
+
 
 </section>
 
@@ -2843,10 +2903,10 @@ Book a beautiful stay, hire a reliable vehicle,
 and enjoy your trip without the stress.
 </p>
 
-<button class="cta-btn" onclick="showCars()">
+<!-- Hero CTA -->
+<button type="button" class="cta-btn" onclick="showCars()">
     Explore Car Hire
 </button>
-
 </div>
 
 </div>
@@ -2886,7 +2946,7 @@ and enjoy your trip without the stress.
 
 <a href="stays.html">Stays</a>
 
-<a href="#cars-section" onclick="showCars(); return false;">
+<a href="javascript:void(0);" onclick="showCars()">
     Car Hire
 </a>
 
@@ -3173,33 +3233,31 @@ function switchSearch(type){
 /* =========================================================
    SHOW CARS
 ========================================================= */
-function showCars(){
-
+function showCars() {
     const staysSection = document.getElementById("stays");
     const carsSection = document.getElementById("cars-section");
 
-    if(!carsSection){
-        console.error("Car Hire section was not found.");
+    if (!carsSection) {
+        console.error("ERROR: #cars-section was not found.");
         return;
     }
 
-    if(staysSection){
+    // Hide stays
+    if (staysSection) {
         staysSection.style.display = "none";
     }
 
+    // Show car hire
     carsSection.style.display = "block";
 
-    setTimeout(function(){
-
+    // Scroll to car hire
+    setTimeout(() => {
         carsSection.scrollIntoView({
             behavior: "smooth",
             block: "start"
         });
-
-    }, 50);
-
-}
-/* =========================================================
+    }, 100);
+}/* =========================================================
    SHOW STAYS
 ========================================================= */
 
@@ -3609,34 +3667,35 @@ function listProperty(){
 
 function mobileMenu(){
 
-    const links =
-    document.querySelector(".nav-links");
+    const links = document.getElementById("navLinks");
+    const button = document.getElementById("menuBtn");
 
-    if(
-        links.style.display === "flex"
-    ){
+    if(!links) return;
 
-        links.style.display = "none";
+    const isOpen = links.classList.toggle("mobile-open");
 
-    }else{
-
-        links.style.display = "flex";
-
-        links.style.position = "absolute";
-        links.style.top = "70px";
-        links.style.left = "0";
-        links.style.right = "0";
-        links.style.background = "white";
-        links.style.padding = "20px";
-        links.style.flexDirection = "column";
-        links.style.boxShadow =
-        "0 10px 25px rgba(0,0,0,.1)";
-
+    if(button){
+        button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        button.innerHTML = isOpen ? "✕" : "☰";
     }
 
 }
 
+function closeMobileMenu(){
 
+    const links = document.getElementById("navLinks");
+    const button = document.getElementById("menuBtn");
+
+    if(links){
+        links.classList.remove("mobile-open");
+    }
+
+    if(button){
+        button.setAttribute("aria-expanded","false");
+        button.innerHTML = "☰";
+    }
+
+}
 
 /* =========================================================
    CLOSE MODAL WHEN CLICKING OUTSIDE
